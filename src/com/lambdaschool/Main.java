@@ -30,8 +30,22 @@ public class Main {
         System.out.println(myList.toString());
         System.out.println();
 
-        myList.sort((v1, v2) -> v2.getYear() - v1.getYear());
+        System.out.println("\t\t --- The List in decending order by year ---");
+        myList.sort((a1, a2) -> a2.getYear() - a1.getYear());
         System.out.println();
-        myList.forEach((v) -> System.out.println(v.getName() + " " + v.getYear()));
+        myList.forEach((a) -> System.out.println(a.getName() + " " + a.getYear()));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted alphabetically ---");
+        myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        System.out.println();
+        myList.forEach((a) -> System.out.println(a.getName() + " " + a.getYear()));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted by movement type ---");
+        myList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+        System.out.println();
+        myList.forEach((a) -> System.out.println(a.getName() + " " + a.move()));
+        System.out.println();
     }
 }

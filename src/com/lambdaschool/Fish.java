@@ -15,7 +15,7 @@ public class Fish extends AbstractAnimal {
     @Override
     public String move() {
         useFood();
-        return null;
+        return "swims";
     }
 
     @Override
