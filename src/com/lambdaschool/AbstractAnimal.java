@@ -39,7 +39,7 @@ public abstract class AbstractAnimal {
         this.food += food;
     }
 
-    public void useFood(int food) {
+    public void useFood() {
         this.food--;
     }
 

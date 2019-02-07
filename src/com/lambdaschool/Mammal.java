@@ -10,6 +10,7 @@ public class Mammal extends AbstractAnimal {
 
     @Override
     public String move() {
+        useFood();
         return "walks";
     }
 

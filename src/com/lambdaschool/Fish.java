@@ -23,4 +23,13 @@ public class Fish extends AbstractAnimal {
     public String reproduce() {
         return null;
     }
+
+    @Override
+    public String toString() {
+        return "Fish{" +
+                "name='" + name + '\'' +
+                ", food=" + food +
+                ", year=" + year +
+                '}';
+    }
 }

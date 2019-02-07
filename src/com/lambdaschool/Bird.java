@@ -23,4 +23,13 @@ public class Bird extends AbstractAnimal {
     public String reproduce() {
         return "eggs";
     }
+
+    @Override
+    public String toString() {
+        return "Bird{" +
+                "name='" + name + '\'' +
+                ", food=" + food +
+                ", year=" + year +
+                '}';
+    }
 }
