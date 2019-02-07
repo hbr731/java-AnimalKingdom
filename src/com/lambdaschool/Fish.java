@@ -20,12 +20,12 @@ public class Fish extends AbstractAnimal {
 
     @Override
     public String breathe() {
-        return null;
+        return "gills";
     }
 
     @Override
     public String reproduce() {
-        return null;
+        return "eggs";
     }
 
     @Override

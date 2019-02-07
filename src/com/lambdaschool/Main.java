@@ -3,6 +3,13 @@ package com.lambdaschool;
 import java.util.ArrayList;
 
 public class Main {
+    public static void filterAnimals(ArrayList<AbstractAnimal> animals, Filter tester) {
+        for (AbstractAnimal a : animals) {
+            if (tester.test(a)) {
+                System.out.println(a.getName() + " " + a.getYear());
+            }
+        }
+    }
 
     public static void main(String[] args) {
         ArrayList<AbstractAnimal> myList = new ArrayList<>();
@@ -46,6 +53,39 @@ public class Main {
         myList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         System.out.println();
         myList.forEach((a) -> System.out.println(a.getName() + " " + a.move()));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted by breathing type lungs---");
+        System.out.println();
+        filterAnimals(myList, a -> a.breathe().equalsIgnoreCase("lungs"));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted by breathing type lungs" +
+                " and were named in 1758---");
+        System.out.println();
+        filterAnimals(myList, a -> ((a.breathe().equalsIgnoreCase("lungs"))
+                && (a.getYear() == 1758)));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted by breathing type lungs " +
+                "and who lay eggs---");
+        System.out.println();
+        filterAnimals(myList, a -> ((a.breathe().equalsIgnoreCase("lungs"))
+                && (a.reproduce().equalsIgnoreCase("eggs"))));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted by breathing type lungs " +
+                "or who lay eggs---");
+        System.out.println();
+        filterAnimals(myList, a -> ((a.breathe().equalsIgnoreCase("lungs"))
+                || (a.reproduce().equalsIgnoreCase("eggs"))));
+        System.out.println();
+
+        System.out.println("\t\t --- The List sorted alphabetically and by animals " +
+                "which were named in 1758---");
+        System.out.println();
+        myList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        filterAnimals(myList, a -> (a.getYear() == 1758));
         System.out.println();
     }
 }
