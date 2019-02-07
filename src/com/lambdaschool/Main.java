@@ -30,5 +30,8 @@ public class Main {
         System.out.println(myList.toString());
         System.out.println();
 
+        myList.sort((v1, v2) -> v2.getYear() - v1.getYear());
+        System.out.println();
+        myList.forEach((v) -> System.out.println(v.getName() + " " + v.getYear()));
     }
 }

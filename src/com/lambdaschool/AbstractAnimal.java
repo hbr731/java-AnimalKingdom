@@ -30,6 +30,7 @@ public abstract class AbstractAnimal {
     public abstract String move();
     public abstract String breathe();
     public abstract String reproduce();
+    public abstract String getName();
 
     public int getYear() {
         return year;

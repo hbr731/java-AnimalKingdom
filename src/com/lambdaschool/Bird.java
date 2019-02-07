@@ -8,6 +8,10 @@ public class Bird extends AbstractAnimal {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String move() {
         useFood();
