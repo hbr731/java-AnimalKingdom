@@ -52,5 +52,4 @@ A student that completes this project shows that they can:
     * List only those animals that breath with lungs and were named in 1758
     * List only those animals that lay eggs and breath with lungs
     * List alphabetically only those animals that were named in 1758
-    * Adding for testing
     * Just adding this here
